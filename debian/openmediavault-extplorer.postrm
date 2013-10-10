@@ -27,7 +27,6 @@ set -e
 case "$1" in
 	purge|remove)
 	
-		/etc/init.d/apache2 reload
 	;;
 	
 	upgrade|failed-upgrade|abort-install|abort-upgrade|disappear|remove)
