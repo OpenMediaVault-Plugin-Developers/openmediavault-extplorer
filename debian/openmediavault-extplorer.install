@@ -1,0 +1,3 @@
+etc/apache2/openmediavault-webgui.d/*	etc/apache2/openmediavault-webgui.d
+var/www/openmediavault/*				var/www/openmediavault
+var/www/extplorer/*						var/www/extplorer
