@@ -1,3 +1,10 @@
+openmediavault-extplorer (0.5.1) stable; urgency=low
+
+  * Show interface in tab using iframe
+  * Add info page with default username/password and link to open new page
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 16 Oct 2013 10:05:27 -0500
+ 
 openmediavault-extplorer (0.5.0) stable; urgency=low
 
   * initial release

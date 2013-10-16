@@ -18,15 +18,35 @@
  * along with OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
  */
 // require("js/omv/WorkspaceManager.js")
-// require("js/omv/workspace/form/Panel.js")
+// require("js/omv/workspace/panel/Panel.js")
 
-Ext.define("OMV.module.admin.service.extplorer.Link", {
+Ext.define("OMV.module.admin.service.extplorer.Info", {
+	extend: "Ext.panel.Panel",
+
+	initComponent: function() {
+		var me = this;
+
+		me.html = "Default username:  admin";
+		me.html += "<br />";
+		me.html += "Default password:  openmediavault";
+		me.html += "<br /><br />";
+		me.html += "<a href='/extplorer/' target='_blank'>Open in a new window</a>";
+
+		me.callParent(arguments);
+	}
+});
+
+Ext.define("OMV.module.admin.service.extplorer.Interface", {
 	extend: "Ext.panel.Panel",
 	
 	initComponent: function() {
 		var me = this;
-		window.open("/extplorer/","blank");
-		me.callParent(Ext.panel.panel);
+		
+		me.html = "<form style='overflow: auto; height: 100%;'>";
+		me.html += "<iframe src='/extplorer/' name='extplorer' longsec='extplorer' width='100%' height='100%'/>";
+		me.html += "<br/></form>";
+		
+		me.callParent(arguments);	
 	}
 });
 
@@ -39,9 +59,17 @@ OMV.WorkspaceManager.registerNode({
 });
 
 OMV.WorkspaceManager.registerPanel({
-	id: "link",
+	id: "interface",
 	path: "/service/extplorer",
-	text: _("Link"),
+	text: _("eXtplorer"),
 	position: 10,
-	className: "OMV.module.admin.service.extplorer.Link"
+	className: "OMV.module.admin.service.extplorer.Interface"
+});
+
+OMV.WorkspaceManager.registerPanel({
+	id: "info",
+	path: "/service/extplorer",
+	text: _("Information"),
+	position: 20,
+	className: "OMV.module.admin.service.extplorer.Info"
 });
