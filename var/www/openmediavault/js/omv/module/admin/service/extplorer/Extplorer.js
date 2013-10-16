@@ -42,10 +42,7 @@ Ext.define("OMV.module.admin.service.extplorer.Interface", {
 	initComponent: function() {
 		var me = this;
 		
-		me.html = "<form style='overflow: auto; height: 100%;'>";
-		me.html += "<iframe src='/extplorer/' name='extplorer' longsec='extplorer' width='100%' height='100%'/>";
-		me.html += "<br/></form>";
-		
+		me.html = "<iframe src='/extplorer/' name='extplorer' longsec='extplorer' width='100%' height='100%' />";
 		me.callParent(arguments);	
 	}
 });
