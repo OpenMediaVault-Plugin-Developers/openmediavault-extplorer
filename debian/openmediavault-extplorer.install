@@ -1,3 +1,4 @@
-etc/apache2/openmediavault-webgui.d/*	etc/apache2/openmediavault-webgui.d
-var/www/openmediavault/*				var/www/openmediavault
-var/www/extplorer/*						var/www/extplorer
+etc/apache2/openmediavault-webgui.d/*   etc/apache2/openmediavault-webgui.d
+var/www/openmediavault/*                var/www/openmediavault
+var/www/extplorer/*                     var/www/extplorer
+usr/share/openmediavault/*              usr/share/openmediavault
