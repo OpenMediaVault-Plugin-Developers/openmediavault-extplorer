@@ -1,3 +1,9 @@
+openmediavault-extplorer (0.5.2) stable; urgency=low
+
+  * minor tweaks to allow for better translation
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 14 Nov 2013 07:01:27 -0500
+ 
 openmediavault-extplorer (0.5.1) stable; urgency=low
 
   * Show interface in tab using iframe
