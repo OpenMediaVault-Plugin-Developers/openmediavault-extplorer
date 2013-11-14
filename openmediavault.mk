@@ -22,15 +22,12 @@
 OMV_PACKAGE := $(shell pwd | sed 's|.*/||')
 OMV_POT_DIR := $(CURDIR)/usr/share/openmediavault/locale
 OMV_POT_FILE := $(OMV_PACKAGE).pot
-OMV_TRANSIFEX_PROJECT_SLUG := openmediavault
 
 omv_pull_po:
-	tx --root="$(CURDIR)/../" pull --all \
-	  --resource=$(OMV_TRANSIFEX_PROJECT_SLUG).$(OMV_PACKAGE)
+	tx --root="$(CURDIR)/../" pull --all --resource=$(OMV_PACKAGE)
 
 omv_push_pot:
-	tx --root="$(CURDIR)/../" push --source \
-	  --resource=$(OMV_TRANSIFEX_PROJECT_SLUG).$(OMV_PACKAGE)
+	tx --root="$(CURDIR)/../" push --source --resource=$(OMV_PACKAGE)
 
 omv_build_pot:
 	dh_testdir
@@ -42,7 +39,7 @@ omv_build_pot:
 	  --output-dir=$(OMV_POT_DIR) --output=$(OMV_POT_FILE) \
 	  --force-po --no-location --no-wrap --sort-output \
 	  --package-name=$(OMV_PACKAGE) -
-	# Remove '#, c-format' comments, otherwise manuall upload of translation
+	# Remove '#, c-format' comments, otherwise manual upload of translation
 	# files confuses Transifex.
 	sed --in-place '/^#, c-format/d' $(OMV_POT_DIR)/$(OMV_POT_FILE)
 
