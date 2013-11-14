@@ -1,5 +1,5 @@
-# openmediavault-extplorer
-# Copyright (C) 2013
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-extplorer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-28 09:01-0500\n"
-"PO-Revision-Date: 2013-10-28 18:25+0000\n"
-"Last-Translator: davidh2k <davidh1990@gmx.de>\n"
+"POT-Creation-Date: 2013-11-14 08:54-0600\n"
+"PO-Revision-Date: 2013-11-14 15:23+0000\n"
+"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/openmediavault-extplorer/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,8 +18,20 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "eXtplorer"
-msgstr "eXtplorer"
+msgid "Default password:  openmediavault"
+msgstr ""
+
+msgid "Default username:  admin"
+msgstr ""
 
 msgid "Information"
 msgstr "Information"
+
+msgid "Open in a new window"
+msgstr ""
+
+msgid "Unable to open file"
+msgstr ""
+
+msgid "eXtplorer"
+msgstr "eXtplorer"
