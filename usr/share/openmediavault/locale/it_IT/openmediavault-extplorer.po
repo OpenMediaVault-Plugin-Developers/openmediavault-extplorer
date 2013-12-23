@@ -3,35 +3,35 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Cyryl Sochacki <cyrylsochacki@gmail.com>, 2013
+# Damtux <sun_lion@live.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-extplorer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-14 08:54-0600\n"
-"PO-Revision-Date: 2013-11-29 10:51+0000\n"
-"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
-"Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/openmediavault-extplorer/language/pl_PL/)\n"
+"PO-Revision-Date: 2013-12-04 19:19+0000\n"
+"Last-Translator: Damtux <sun_lion@live.com>\n"
+"Language-Team: Italian (http://www.transifex.com/projects/p/openmediavault-extplorer/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl_PL\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Default password:  openmediavault"
-msgstr "Domyślne hasło: openmediavault"
+msgstr "Password predefinita: openmediavault"
 
 msgid "Default username:  admin"
-msgstr "Domyślny login: admin"
+msgstr "Nome utente predefinito: admin"
 
 msgid "Information"
-msgstr "Informacje"
+msgstr "Informazioni"
 
 msgid "Open in a new window"
-msgstr "Otwórz w nowym oknie"
+msgstr "Apri in una nuova finestra"
 
 msgid "Unable to open file"
-msgstr "Niemożna otworzyć pliku"
+msgstr "Impossibile aprire il file"
 
 msgid "eXtplorer"
 msgstr "eXtplorer"
