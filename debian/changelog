@@ -1,3 +1,9 @@
+openmediavault-extplorer (0.5.3) stable; urgency=low
+
+  * update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 23 Dec 2013 16:17:27 -0500
+ 
 openmediavault-extplorer (0.5.2) stable; urgency=low
 
   * minor tweaks to allow for better translation
