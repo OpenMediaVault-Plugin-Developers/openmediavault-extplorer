@@ -21,27 +21,27 @@
 // require("js/omv/workspace/panel/Panel.js")
 
 Ext.define("OMV.module.admin.service.extplorer.Info", {
-    extend: "Ext.panel.Panel",
+    extend : "Ext.panel.Panel",
 
-    initComponent: function() {
+    initComponent : function() {
         var me = this;
 
-        me.html = "<ul>";
-        me.html += "<li>" + _("Default username:  admin") + "</li>";
-        me.html += "<li>" + _("Default password:  openmediavault") + "</li>";
-        me.html += "</ul>";
-        me.html += "<ul>";
-        me.html += "<li><a href='/extplorer/' target='_blank'>" + _("Open in a new window") + "</a></li>";
-        me.html += "</ul>";
+        me.html = "<ul>" +
+                    "<li>" + _("Default username:  admin") + "</li>" +
+                    "<li>" + _("Default password:  openmediavault") + "</li>" +
+                  "</ul>" +
+                  "<ul>" +
+                    "<li><a href='/extplorer/' target='_blank'>" + _("Open in a new window") + "</a></li>" +
+                  "</ul>";
 
         me.callParent(arguments);
     }
 });
 
 Ext.define("OMV.module.admin.service.extplorer.Interface", {
-    extend: "Ext.panel.Panel",
+    extend : "Ext.panel.Panel",
 
-    initComponent: function() {
+    initComponent : function() {
         var me = this;
 
         me.html = "<iframe src='/extplorer/' name='extplorer' longsec='extplorer' width='100%' height='100%' />";
@@ -50,25 +50,25 @@ Ext.define("OMV.module.admin.service.extplorer.Interface", {
 });
 
 OMV.WorkspaceManager.registerNode({
-    id: "extplorer",
-    path: "/service",
-    text: _("eXtplorer"),
-    icon16: "images/extplorer.png",
-    iconSvg: "images/extplorer.svg"
+    id      : "extplorer",
+    path    : "/service",
+    text    : _("eXtplorer"),
+    icon16  : "images/extplorer.png",
+    iconSvg : "images/extplorer.svg"
 });
 
 OMV.WorkspaceManager.registerPanel({
-    id: "interface",
-    path: "/service/extplorer",
-    text: _("eXtplorer"),
-    position: 10,
-    className: "OMV.module.admin.service.extplorer.Interface"
+    id        : "interface",
+    path      : "/service/extplorer",
+    text      : _("eXtplorer"),
+    position  : 10,
+    className : "OMV.module.admin.service.extplorer.Interface"
 });
 
 OMV.WorkspaceManager.registerPanel({
-    id: "info",
-    path: "/service/extplorer",
-    text: _("Information"),
-    position: 20,
-    className: "OMV.module.admin.service.extplorer.Info"
+    id        : "info",
+    path      : "/service/extplorer",
+    text      : _("Information"),
+    position  : 20,
+    className : "OMV.module.admin.service.extplorer.Info"
 });
