@@ -4,10 +4,10 @@ if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' 
 /**
  * MAIN FILE! (formerly known as index.php)
  * 
- * @version $Id: admin.extplorer.php 227 2012-12-25 06:52:34Z soeren $
+ * @version $Id: admin.extplorer.php 231 2013-09-04 18:12:47Z soeren $
  * 
  * @package eXtplorer
- * @copyright soeren 2007-2009
+ * @copyright soeren 2007-2013
  * @author The eXtplorer project (http://extplorer.net)
  * @author The	The QuiX project (http://quixplorer.sourceforge.net)
  * @license
@@ -39,12 +39,12 @@ if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' 
 **/
 
 // The eXtplorer version number
-$GLOBALS['ext_version'] = '2.1.3';
+$GLOBALS['ext_version'] = '2.1.5';
 $GLOBALS['ext_home'] = 'http://extplorer.net';
 
 //------------------------------------------------------------------------------
 if( defined( 'E_STRICT' ) ) { // Suppress Strict Standards Warnings
-	error_reporting(E_ALL);
+	error_reporting(E_ALL & ~E_STRICT & ~E_NOTICE);
 }
 //------------------------------------------------------------------------------
 umask(0002); // Added to make created files/dirs group writable

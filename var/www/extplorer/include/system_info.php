@@ -2,7 +2,7 @@
 // ensure this file is being included by a parent file
 if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' );
 /**
- * @version $Id: system_info.php 201 2011-06-27 09:45:09Z soeren $
+ * @version $Id: system_info.php 230 2013-03-15 21:17:35Z soeren $
  * @package eXtplorer
  * @copyright soeren 2007-2009
  * @author The eXtplorer project (http://extplorer.net)
@@ -313,7 +313,7 @@ function show_about() {
 	<br />
 	".ext_Lang::msg('your_version').": <a href=\"".$GLOBALS['ext_home']."\" target=\"_blank\">eXtplorer {$GLOBALS['ext_version']}</a>
 	<br />
- (<a href=\"http://virtuemart.net/index2.php?option=com_versions&amp;catid=5&amp;myVersion=". $GLOBALS['ext_version'] ."\" onclick=\"javascript:void window.open('http://virtuemart.net/index2.php?option=com_versions&catid=5&myVersion=". $GLOBALS['ext_version'] ."', 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=580,directories=no,location=no'); return false;\" title=\"".$GLOBALS["messages"]["check_version"]."\">".$GLOBALS["messages"]["check_version"]."</a>)
+ (<a href=\"http://extplorer.net/version_check?myVersion=". $GLOBALS['ext_version'] ."\" onclick=\"javascript:void window.open('http://extplorer.net/version_check?myVersion=". $GLOBALS['ext_version'] ."', 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=580,directories=no,location=no'); return false;\" title=\"".$GLOBALS["messages"]["check_version"]."\">".$GLOBALS["messages"]["check_version"]."</a>)
 
 	";
 	

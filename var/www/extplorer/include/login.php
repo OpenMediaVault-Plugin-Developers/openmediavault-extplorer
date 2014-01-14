@@ -2,7 +2,7 @@
 // ensure this file is being included by a parent file
 if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' );
 /**
- * @version $Id: login.php 201 2011-06-27 09:45:09Z soeren $
+ * @version $Id: login.php 231 2013-09-04 18:12:47Z soeren $
  * @package eXtplorer
  * @copyright soeren 2007-2009
  * @author The eXtplorer project (http://extplorer.net)
@@ -89,7 +89,7 @@ function login() {
 			if( $authentication_type == 'extplorer') {
 				// Second attempt to authenticate, since we've switched password hashing algorithm
 				// now we fall back to md5 hashing.
-				$password = md5($GLOBALS['__POST']['password']);
+				$password = md5((string)$GLOBALS['__POST']['password']);
 				$res = $auth->onAuthenticate( array('username' => $username, 'password' => $password) );
 				if( !PEAR::isError($res) && $res !== false ) {
 					if( @$GLOBALS['__POST']['action'] == 'login' && ext_isXHR() ) {

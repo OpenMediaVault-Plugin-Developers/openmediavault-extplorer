@@ -2,7 +2,7 @@
 // ensure this file is being included by a parent file
 if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' );
 /**
- * @version $Id: header.php 223 2012-07-02 13:46:08Z soeren $
+ * @version $Id: header.php 231 2013-09-04 18:12:47Z soeren $
  * @package eXtplorer
  * @copyright soeren 2007-2012
  * @author The eXtplorer project (http://extplorer.net)
@@ -36,8 +36,23 @@ function show_header($dirlinks='') {
 	$url = htmlentities(str_replace( array('&dir=', '&action=', '&file_mode='), 
 						array('&a=','&b=','&c='), 
 						$_SERVER['REQUEST_URI'] ), ENT_QUOTES );
-	
-	$url_appendix = strpos($url, '?') === false ? '?' : '&amp;';
+	$urlArr = parse_url( $url );
+	$url_appendix = '';
+	if( !empty( $urlArr['query'])) {
+		$queryParts = explode('&', $urlArr['query']);
+		$params = array(); 
+	    foreach ($queryParts as $param) { 
+	        $item = explode('=', $param); 
+	        $params[urlencode(urldecode($item[0]))] = urlencode(urldecode($item[1])); 
+	    }
+	    $query = '';
+	    foreach( $params as $key => $val ) {
+	    	$query .= $key .'='. $val.'&amp;';
+	    }
+	    $url = $urlArr['path'].'?'.$query;
+	} else {
+		$url_appendix = '?';
+	}
 	
 	echo "<link rel=\"stylesheet\" href=\""._EXT_URL."/style/style.css\" type=\"text/css\" />\n";
 	echo "<div id=\"ext_header\">\n";
