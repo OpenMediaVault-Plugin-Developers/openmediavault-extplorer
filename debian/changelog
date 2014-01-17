@@ -1,6 +1,7 @@
 openmediavault-extplorer (0.5.5) stable; urgency=low
 
   * change admin user root directory
+  * update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 17 Jan 2014 09:35:27 -0500
  
