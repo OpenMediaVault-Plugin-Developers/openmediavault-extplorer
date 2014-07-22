@@ -28,7 +28,7 @@ FILENAME="eXtplorer_2.1.5.zip"
 LINK="http://downloads.sourceforge.net/project/extplorer/${FILENAME}"
 FILE="/tmp/${FILENAME}"
 INSTALL_DIR="/usr/share/extplorer"
-CONFIG_FILE="${INSTALL_DIR/config/.htusers.php"
+CONFIG_FILE="${INSTALL_DIR}/config/.htusers.php"
 
 case "$1" in
     configure)
