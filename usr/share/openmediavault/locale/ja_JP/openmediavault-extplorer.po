@@ -3,35 +3,34 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# David Hönel <davidh1990@gmx.de>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-extplorer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-14 08:54-0600\n"
-"PO-Revision-Date: 2013-11-20 09:14+0000\n"
-"Last-Translator: David Hönel <davidh1990@gmx.de>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/openmediavault-extplorer/language/de/)\n"
+"PO-Revision-Date: 2014-01-31 12:39+0000\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
+"Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-extplorer/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Default password:  openmediavault"
-msgstr "Standardpasswort: openmediavault"
+msgstr "デフォルトパスワード:   openmediavault"
 
 msgid "Default username:  admin"
-msgstr "Standardbenutzer: admin"
+msgstr "デフォルトユーザー名:  admin"
 
 msgid "Information"
-msgstr "Information"
+msgstr "情報"
 
 msgid "Open in a new window"
-msgstr "In neuem Fenster öffnen"
+msgstr "新しいウィンドウを開く"
 
 msgid "Unable to open file"
-msgstr "Unfähig die Datei zu öffnen"
+msgstr "ファイルが開けません"
 
 msgid "eXtplorer"
 msgstr "eXtplorer"
