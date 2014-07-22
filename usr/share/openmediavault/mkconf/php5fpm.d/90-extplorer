@@ -21,7 +21,6 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 PHP_FPM_POOL_DIR=/etc/php5/fpm/pool.d
-
 EXTPLORER_POOL_CONF="${PHP_FPM_POOL_DIR}/openmediavault-extplorer-site.conf"
 
 if [ -e "${EXTPLORER_POOL_CONF}" ]; then

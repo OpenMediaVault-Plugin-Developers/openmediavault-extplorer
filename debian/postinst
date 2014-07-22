@@ -24,31 +24,63 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-case "$1" in
-	configure)
+FILENAME="eXtplorer_2.1.5.zip"
+LINK="http://downloads.sourceforge.net/project/extplorer/${FILENAME}"
+FILE="/tmp/${FILENAME}"
+INSTALL_DIR="/usr/share/extplorer"
+CONFIG_FILE="${INSTALL_DIR/config/.htusers.php"
 
-		chown -R openmediavault:openmediavault /usr/share/extplorer
+case "$1" in
+    configure)
+
+        if [ ! -d "${INSTALL_DIR}" ]; then
+            echo "Installing eXtplorer..."
+
+            mkdir -p ${INSTALL_DIR}
+
+            if [ -f "${FILE}" ]; then
+                rm -f ${FILE}
+            fi
+
+            wget ${LINK} -O ${FILE}
+            unzip ${FILE} -d ${INSTALL_DIR}
+            rm -f ${FILE}
+
+            cat <<EOF > ${CONFIG_FILE}
+<?php
+    // ensure this file is being included by a parent file
+    if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' );
+    \$GLOBALS["users"]=array(
+        array('admin','\$2a\$08\$o9113Sa234xV8aGmC2mZvepUeYyPsUU5jibk3FxwP7nE7zTQ/S0Ha','/','http://localhost','1','','7',1),
+    );
+?>
+EOF
+
+            chown -R openmediavault:openmediavault ${INSTALL_DIR}
+        else
+            echo "eXtplorer already installed."
+        fi
 
         omv-mkconf php5fpm
         service php5-fpm reload
-        
-        omv-mkconf nginx
-		service nginx reload
 
-		echo "Default username is:  admin"
-		echo "Default password is:  openmediavault"
-        
+        omv-mkconf nginx
+        service nginx reload
+
+        echo "Default username is:  admin"
+        echo "Default password is:  openmediavault"
+
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
-	;;
+    ;;
 
-	abort-upgrade|abort-remove|abort-deconfigure)
-	;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
 
-	*)
-		echo "postinst called with unknown argument '$1'" >&2
-		exit 1
-	;;
+    *)
+        echo "postinst called with unknown argument '$1'" >&2
+        exit 1
+    ;;
 esac
 
 exit 0
