@@ -1,0 +1,64 @@
+#!/bin/sh
+#
+# Copyright (C) 2013-2014 OpenMediaVault Plugin Developers
+#
+# This file is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# This file is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this file. If not, see <http://www.gnu.org/licenses/>.
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+EXTPLORER_SITE_CONF="/etc/nginx/openmediavault-webgui.d/openmediavault-extplorer-site.conf"
+
+if [ -e "${EXTPLORER_SITE_CONF}" ]; then
+    rm ${EXTPLORER_SITE_CONF}
+fi
+
+cat <<EOF > "${EXTPLORER_SITE_CONF}"
+location /extplorer/ {
+    alias /usr/share/extplorer/;
+    index index.php;
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php5-fpm-openmediavault-extplorer.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+    }
+    location = /extplorer/favicon.ico {
+        log_not_found off;
+        access_log off;
+    }
+    location = /extplorer/robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+    location /extplorer/ {
+        try_files \$uri \$uri/ /extplorer/index.php?\$args;
+    }
+    location ~ /extplorer/\. {
+        deny all;
+    }
+    location ~* /extplorer/(?:config)/.*\.php$ {
+        deny all;
+    }
+    location ~* /extplorer/\.(js|css|png|jpg|jpeg|gif|ico)$ {
+        expires max;
+        log_not_found off;
+    }
+}
+EOF
+
+exit 0

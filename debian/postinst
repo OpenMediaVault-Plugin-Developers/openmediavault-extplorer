@@ -24,27 +24,22 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-HTTPD_CONFIG="/etc/apache2/httpd.conf"
-
 case "$1" in
 	configure)
 
-		if grep -q "MaxRequestLen 20000000000" "$HTTPD_CONFIG"
-		then
-			echo "Max Request Len already added."
-		else
-			echo "
-<ifmodule mod_fcgid.c>
-MaxRequestLen 20000000000
-</ifmodule>" >> $HTTPD_CONFIG
-		fi
+		chown -R openmediavault:openmediavault /usr/share/extplorer
 
-		chown -R openmediavault:openmediavault /var/www/extplorer
-
-		/etc/init.d/apache2 reload
+        omv-mkconf php5-fpm
+        service php5-fpm reload
+        
+        omv-mkconf nginx
+		service nginx reload
 
 		echo "Default username is:  admin"
 		echo "Default password is:  openmediavault"
+        
+        dpkg-trigger update-fixperms
+        dpkg-trigger update-locale
 	;;
 
 	abort-upgrade|abort-remove|abort-deconfigure)

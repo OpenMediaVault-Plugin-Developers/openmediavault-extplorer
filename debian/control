@@ -1,14 +1,13 @@
 Source: openmediavault-extplorer
 Section: misc
 Priority: optional
-Maintainer: Aaron Murray <aaron@omv-extras.org>
-Build-Depends: debhelper (>= 7 )
+Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
+Build-Depends: debhelper (>> 9 )
 Standards-Version: 3.9.3
 Homepage: http://omv-extras.org/
 
 Package: openmediavault-extplorer
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 0.5), openmediavault (<< 0.6)
+Depends: ${misc:Depends}, openmediavault (>= 1.0.7)
 Description: OpenMediaVault eXtplorer plugin
- installs eXtplorer and adds link in the OpenMediaVault
- web interface.
+ installs eXtplorer and adds link in the OpenMediaVault web interface.

@@ -2,6 +2,8 @@
 
 include ./openmediavault.mk
 
+PLUGIN_NAME=extplorer
+
 clean:
 	dh_testdir
 	dh_testroot
@@ -14,6 +16,8 @@ install:
 	dh_prep
 	dh_installdirs
 	dh_install
+	chmod +x $(CURDIR)/debian/openmediavault-${PLUGIN_NAME}/usr/share/openmediavault/mkconf/nginx.d/90-${PLUGIN_NAME}
+	chmod +x $(CURDIR)/debian/openmediavault-${PLUGIN_NAME}/usr/share/openmediavault/mkconf/php5fpm.d/90-${PLUGIN_NAME}
 
 binary-indep: install omv_clean_scm
 	dh_testdir

@@ -1,3 +1,10 @@
+openmediavault-extplorer (1.0) UNRELEASED; urgency=low
+
+  * Update for kralizec/nginx
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 22 Jul 2014 07:50:44 -0500
+
 openmediavault-extplorer (0.5.5) stable; urgency=low
 
   * change admin user root directory
