@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // French Mimes Module for v2.3 (translated by Olivier Pariseau and Alexandre PRIETO)
 

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // Turkish Language for eXtplorer (Translated by Sinan Ata, Tolga'(cumla.blogspot.com))
 global $_VERSION;

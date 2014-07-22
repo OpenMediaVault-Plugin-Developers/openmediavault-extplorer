@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // $Id: $
 // English Language Module for v2.3 (translated by the QuiX project)
 global $_VERSION;

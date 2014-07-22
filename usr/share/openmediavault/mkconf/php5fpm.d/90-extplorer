@@ -31,12 +31,12 @@ fi
 cat <<EOF > "${EXTPLORER_POOL_CONF}"
 [openmediavault-extplorer]
 listen = /var/run/php5-fpm-openmediavault-extplorer.sock
-listen.owner = openmediavault
-listen.group = users
+listen.owner = www-data
+listen.group = www-data
 listen.mode = 0600
 
-user = openmediavault
-group = users
+user = www-data
+group = www-data
 
 pm = dynamic
 pm.max_children = 5

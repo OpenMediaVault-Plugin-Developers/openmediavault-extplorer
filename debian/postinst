@@ -29,7 +29,7 @@ case "$1" in
 
 		chown -R openmediavault:openmediavault /usr/share/extplorer
 
-        omv-mkconf php5-fpm
+        omv-mkconf php5fpm
         service php5-fpm reload
         
         omv-mkconf nginx

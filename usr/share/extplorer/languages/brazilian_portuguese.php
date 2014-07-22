@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Portuguese Translation by Paulino Michelazzo - paulino@michelazzo.com.br
 // http://www.noritmodomambo.org
 // Version: 1.0

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // Spanish Language Module for eXtplorer (translated by J. Pedro Flor P. y Actualizado por Udo Llorens)
 global $_VERSION;

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // traditional chinese Mines Module for v2.3 (translated by www.which.tw)
 

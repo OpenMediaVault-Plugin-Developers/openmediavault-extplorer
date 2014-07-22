@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // French Language Module for eXtplorer (translated by Olivier Pariseau and Alexandre PRIETO)
 

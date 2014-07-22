@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // $Id: srpski_mimes.php 149 2011-05-27 09:36:27Z talatorre $
 // Serbian (Cyrillic) Language Module for v2.3 (translated by Bojan Saric)
 // Additional translation by:

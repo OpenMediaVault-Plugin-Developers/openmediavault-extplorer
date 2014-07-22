@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 // Turkish Language for QuiX (Translated by Sinan Ata 'From Turkey'(cumla.blogspot.com))
 

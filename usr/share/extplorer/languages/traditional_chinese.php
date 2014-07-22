@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // $Id: traditional_chinese.php 195 2011-05-30 23:13:22Z sloarch $
 // Traditional Chinese Language Module for v2.3 (translated by www.which.tw)
 // Additional translation by sloarch, mic, Paulino Michelazzo
