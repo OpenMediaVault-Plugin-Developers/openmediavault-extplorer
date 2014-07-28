@@ -31,6 +31,9 @@ Ext.define("OMV.module.admin.service.extplorer.Info", {
                     "<li>" + _("Default password:  openmediavault") + "</li>" +
                   "</ul>" +
                   "<ul>" +
+                    "<li>" + _("Give the <b>extplorer</b> user read or read/write privileges to any shared folder to be accessed in eXtplorer.") + "</li>" +
+                  "</ul>" +
+                  "<ul>" +
                     "<li><a href='/extplorer/' target='_blank'>" + _("Open in a new window") + "</a></li>" +
                   "</ul>";
 
