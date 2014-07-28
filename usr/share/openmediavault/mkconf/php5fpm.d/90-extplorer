@@ -22,6 +22,7 @@ set -e
 
 PHP_FPM_POOL_DIR=/etc/php5/fpm/pool.d
 EXTPLORER_POOL_CONF="${PHP_FPM_POOL_DIR}/openmediavault-extplorer-site.conf"
+USERNAME="extplorer"
 
 if [ -e "${EXTPLORER_POOL_CONF}" ]; then
     rm ${EXTPLORER_POOL_CONF}
@@ -34,8 +35,8 @@ listen.owner = www-data
 listen.group = www-data
 listen.mode = 0600
 
-user = openmediavault
-group = openmediavault
+user = ${USERNAME}
+group = users
 
 pm = dynamic
 pm.max_children = 5

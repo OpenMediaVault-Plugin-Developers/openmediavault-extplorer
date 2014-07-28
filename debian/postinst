@@ -31,8 +31,17 @@ INSTALL_DIR="/usr/share/extplorer"
 CONFIG_FILE="${INSTALL_DIR}/config/.htusers.php"
 SCRIPTS_FILE="scripts.tar.gz"
 
+USERNAME="extplorer"
+
 case "$1" in
     configure)
+
+        if ! getent passwd ${USERNAME} >/dev/null 2>&1; then
+            echo "Adding ${USERNAME} user..."
+            useradd --create-home --groups users --no-user-group --shell /usr/sbin/nologin ${USERNAME}
+        else
+            echo "${USERNAME} user already exists."
+        fi
 
         if [ ! -d "${INSTALL_DIR}" ]; then
             echo "Installing eXtplorer..."
