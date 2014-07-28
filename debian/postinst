@@ -29,6 +29,7 @@ LINK="http://downloads.sourceforge.net/project/extplorer/${FILENAME}"
 FILE="/tmp/${FILENAME}"
 INSTALL_DIR="/usr/share/extplorer"
 CONFIG_FILE="${INSTALL_DIR}/config/.htusers.php"
+SCRIPTS_FILE="scripts.tar.gz"
 
 case "$1" in
     configure)
@@ -45,6 +46,8 @@ case "$1" in
             wget ${LINK} -O ${FILE}
             unzip ${FILE} -d ${INSTALL_DIR}
             rm -f ${FILE}
+
+            tar xzf "${INSTALL_DIR}/${SCRIPTS_FILE}" -C ${INSTALL_DIR}
 
             cat <<EOF > ${CONFIG_FILE}
 <?php
