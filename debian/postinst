@@ -73,6 +73,8 @@ EOF
             echo "eXtplorer already installed."
         fi
 
+        chown extplorer:openmediavault ${CONFIG_FILE}
+
         omv-mkconf php5fpm
         service php5-fpm reload
 
