@@ -1,4 +1,4 @@
-openmediavault-extplorer (1.0.3) trusty; urgency=medium
+openmediavault-extplorer (1.0.3) stable; urgency=low
 
   * Fix uninstall
 
