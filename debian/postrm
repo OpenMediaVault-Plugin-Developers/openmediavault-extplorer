@@ -9,18 +9,20 @@ EXTPLORER_POOL_CONF="/etc/php5/fpm/pool.d/openmediavault-extplorer-site.conf"
 EXTPLORER_SITE_CONF="/etc/nginx/openmediavault-webgui.d/openmediavault-extplorer-site.conf"
 
 case "$1" in
-    purge|remove)
+    purge)
+        userdel -r extplorer
+    ;;
+
+    remove)
         rm -rf /usr/share/extplorer
 
         if [ -e "${EXTPLORER_SITE_CONF}" ]; then
-            rm ${EXTPLORER_SITE_CONF}
+            rm -f ${EXTPLORER_SITE_CONF}
         fi
 
         if [ -e "${EXTPLORER_POOL_CONF}" ]; then
-            rm ${EXTPLORER_POOL_CONF}
+            rm -f ${EXTPLORER_POOL_CONF}
         fi
-
-        userdel -r extplorer
 
         service php5-fpm reload
         service nginx reload
