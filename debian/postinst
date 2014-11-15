@@ -24,8 +24,8 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-FILENAME="eXtplorer_2.1.5.zip"
-LINK="http://downloads.sourceforge.net/project/extplorer/${FILENAME}"
+FILENAME="eXtplorer_2.1.6.zip"
+LINK="http://extplorer.net/attachments/download/50/${FILENAME}"
 FILE="/tmp/${FILENAME}"
 INSTALL_DIR="/usr/share/extplorer"
 CONFIG_FILE="${INSTALL_DIR}/config/.htusers.php"

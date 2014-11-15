@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Stefan Thrane Overby <stoverby@gmail.com>, 2013-2014
+# Zacharie ARNAISE <spacebrain.damage@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-extplorer\n"
@@ -11,29 +11,29 @@ msgstr ""
 "POT-Creation-Date: 2014-07-28 08:18-0500\n"
 "PO-Revision-Date: 2014-11-14 19:48+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
-"Language-Team: Danish (http://www.transifex.com/projects/p/openmediavault-extplorer/language/da/)\n"
+"Language-Team: French (http://www.transifex.com/projects/p/openmediavault-extplorer/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: da\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Default password:  openmediavault"
-msgstr "Standard adgangskode: openmediavault"
+msgstr "Mot de passe par défaut: openmediavault"
 
 msgid "Default username:  admin"
-msgstr "Standard brugernavn: admin"
+msgstr "Nom d'utilisateur par défaut: admin"
 
 msgid ""
 "Give the <b>extplorer</b> user read or read/write privileges to any shared "
 "folder to be accessed in eXtplorer."
-msgstr "Giv <b>extplorer</b> brugeren læse eller læse/skrive rettigheder til alle delte mapper, der tilgås i eXtplorer."
+msgstr ""
 
 msgid "Information"
-msgstr "Oplysninger"
+msgstr "Information"
 
 msgid "Open in a new window"
-msgstr "Åben i ny vindue"
+msgstr "Ouvrir dans une nouvelle fenêtre "
 
 msgid "eXtplorer"
 msgstr "eXtplorer"

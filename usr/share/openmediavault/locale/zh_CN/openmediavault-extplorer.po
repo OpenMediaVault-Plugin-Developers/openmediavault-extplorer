@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013
+# songming <by@songming.me>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-extplorer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-28 08:18-0500\n"
-"PO-Revision-Date: 2014-07-28 13:20+0000\n"
+"PO-Revision-Date: 2014-11-14 19:48+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-extplorer/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "默认用户名：admin"
 msgid ""
 "Give the <b>extplorer</b> user read or read/write privileges to any shared "
 "folder to be accessed in eXtplorer."
-msgstr ""
+msgstr "给<b>extplorer</b>用户读或读/写权限，这样eXtplorer可以访问任何共享文件夹。"
 
 msgid "Information"
 msgstr "信息"
