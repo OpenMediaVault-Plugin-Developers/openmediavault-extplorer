@@ -28,7 +28,8 @@ FILENAME="eXtplorer_2.1.6.zip"
 LINK="http://extplorer.net/attachments/download/50/${FILENAME}"
 FILE="/tmp/${FILENAME}"
 INSTALL_DIR="/usr/share/extplorer"
-CONFIG_FILE="${INSTALL_DIR}/config/.htusers.php"
+CONFIG_FILENAME=".htusers.php"
+CONFIG_FILE="${INSTALL_DIR}/config/${CONFIG_FILENAME}"
 SCRIPTS_FILE="scripts.tar.gz"
 
 USERNAME="extplorer"
@@ -43,21 +44,28 @@ case "$1" in
             echo "${USERNAME} user already exists."
         fi
 
-        if [ ! -d "${INSTALL_DIR}" ]; then
-            echo "Installing eXtplorer..."
+        echo "Installing eXtplorer..."
 
-            mkdir -p ${INSTALL_DIR}
+        if [ -f "${CONFIG_FILE}" ]; then
+            cp "${CONFIG_FILE}" /tmp/
+        fi
 
-            if [ -f "${FILE}" ]; then
-                rm -f ${FILE}
-            fi
+        rm -rf ${INSTALL_DIR}
+        mkdir -p ${INSTALL_DIR}
 
-            wget ${LINK} -O ${FILE}
-            unzip ${FILE} -d ${INSTALL_DIR}
+        if [ -f "${FILE}" ]; then
             rm -f ${FILE}
+        fi
 
-            tar xzf "${INSTALL_DIR}/${SCRIPTS_FILE}" -C ${INSTALL_DIR}
+        wget ${LINK} -O ${FILE}
+        unzip ${FILE} -d ${INSTALL_DIR}
+        rm -f ${FILE}
 
+        tar xzf "${INSTALL_DIR}/${SCRIPTS_FILE}" -C ${INSTALL_DIR}
+
+        if [ -f "/tmp/${CONFIG_FILENAME}" ]; then
+            mv "/tmp/${CONFIG_FILENAME}" "${CONFIG_FILE}"
+        else
             cat <<EOF > ${CONFIG_FILE}
 <?php
     // ensure this file is being included by a parent file
@@ -67,12 +75,9 @@ case "$1" in
     );
 ?>
 EOF
-
-            chown -R openmediavault:openmediavault ${INSTALL_DIR}
-        else
-            echo "eXtplorer already installed."
         fi
 
+        chown -R openmediavault:openmediavault ${INSTALL_DIR}
         chown extplorer:openmediavault ${CONFIG_FILE}
 
         omv-mkconf php5fpm
