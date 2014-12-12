@@ -3,37 +3,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Raul Fernandez Garcia <raulfg3@gmail.com>, 2014
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-extplorer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-28 08:18-0500\n"
-"PO-Revision-Date: 2014-11-16 10:04+0000\n"
-"Last-Translator: Raul Fernandez Garcia <raulfg3@gmail.com>\n"
-"Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/openmediavault-extplorer/language/es_ES/)\n"
+"PO-Revision-Date: 2014-12-08 07:06+0000\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
+"Language-Team: Galician (http://www.transifex.com/projects/p/openmediavault-extplorer/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
+"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Default password:  openmediavault"
-msgstr "Contraseña por defecto: openmediavault"
+msgstr "Contrasinal predeterminado:  openmediavault"
 
 msgid "Default username:  admin"
-msgstr "Usuario por defecto: admin"
+msgstr "Nome predeterminado de usuario"
 
 msgid ""
 "Give the <b>extplorer</b> user read or read/write privileges to any shared "
 "folder to be accessed in eXtplorer."
-msgstr "Da al usuario <b>extplorer</b> privilegios de lectura o de lectura/escritura en cualquier carpeta compartida a la que necesite acceder eXtplorer."
+msgstr "Concede ao usuario <b>extplorer</b> privilexios de lectura ou de lectura/escritura en calquera cartafol compartido ao que acceda eXtplorer."
 
 msgid "Information"
 msgstr "Información"
 
 msgid "Open in a new window"
-msgstr "Abrir en una nueva ventana"
+msgstr "Abrir nunha nova xanela"
 
 msgid "eXtplorer"
 msgstr "eXtplorer"
