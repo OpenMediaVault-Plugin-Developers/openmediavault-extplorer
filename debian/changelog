@@ -1,6 +1,7 @@
 openmediavault-extplorer (1.1) stable; urgency=low
 
   * Update to eXtplorer 2.1.7
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sat, 21 Mar 2015 10:18:59 -0500
 
