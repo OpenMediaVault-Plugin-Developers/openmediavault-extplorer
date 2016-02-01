@@ -1,3 +1,9 @@
+openmediavault-extplorer (1.2) stable; urgency=low
+
+  * Update to extplorer 2.1.8
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 01 Feb 2016 09:39:40 -0600
+
 openmediavault-extplorer (1.1) stable; urgency=low
 
   * Update to eXtplorer 2.1.7
