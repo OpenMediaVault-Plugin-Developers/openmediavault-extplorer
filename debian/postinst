@@ -60,7 +60,7 @@ case "$1" in
         tar xzf ${FILE} -C ${INSTALL_DIR}
         rm -f ${FILE}
 
-        if [ ! -f "${SAVED_CONFIG}" ]; then
+        if [ -f "${SAVED_CONFIG}" ]; then
             mv "${SAVED_CONFIG}" "${CONFIG_FILE}"
         else
             cat <<EOF > ${CONFIG_FILE}
