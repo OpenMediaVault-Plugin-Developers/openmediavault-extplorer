@@ -9,6 +9,6 @@ Homepage: http://omv-extras.org/
 
 Package: openmediavault-extplorer
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 1.0.7), unzip
+Depends: ${misc:Depends}, openmediavault (>= 1.0.7)
 Description: OpenMediaVault eXtplorer plugin
  installs eXtplorer and adds link in the OpenMediaVault web interface.

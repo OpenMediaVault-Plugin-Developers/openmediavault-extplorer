@@ -24,14 +24,13 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-FILENAME="eXtplorer_2.1.8.zip"
-LINK="http://extplorer.net/attachments/download/65/${FILENAME}"
+FILENAME="extplorer_2.1.9.tar.gz"
+LINK="http://omv-extras.org/${FILENAME}"
 FILE="/tmp/${FILENAME}"
 INSTALL_DIR="/usr/share/extplorer"
 CONFIG_FILENAME=".htusers.php"
 CONFIG_FILE="${INSTALL_DIR}/config/${CONFIG_FILENAME}"
-SCRIPTS_FILE="scripts.tar.gz"
-
+SAVED_CONFIG="/tmp/${CONFIG_FILENAME}"
 USERNAME="extplorer"
 
 case "$1" in
@@ -47,7 +46,7 @@ case "$1" in
         echo "Installing eXtplorer..."
 
         if [ -f "${CONFIG_FILE}" ]; then
-            cp "${CONFIG_FILE}" /tmp/
+            cp "${CONFIG_FILE}" "${SAVED_CONFIG}"
         fi
 
         rm -rf ${INSTALL_DIR}
@@ -58,13 +57,11 @@ case "$1" in
         fi
 
         wget ${LINK} -O ${FILE}
-        unzip ${FILE} -d ${INSTALL_DIR}
+        tar xzf ${FILE} -C ${INSTALL_DIR}
         rm -f ${FILE}
 
-        tar xzf "${INSTALL_DIR}/${SCRIPTS_FILE}" -C ${INSTALL_DIR}
-
-        if [ -f "/tmp/${CONFIG_FILENAME}" ]; then
-            mv "/tmp/${CONFIG_FILENAME}" "${CONFIG_FILE}"
+        if [ ! -f "${SAVED_CONFIG}" ]; then
+            mv "${SAVED_CONFIG}" "${CONFIG_FILE}"
         else
             cat <<EOF > ${CONFIG_FILE}
 <?php
